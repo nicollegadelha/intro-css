@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Sorrir</title>
+    <style>
+        /*Estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #8fc96b, #5fae4e);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Centraliza o conteúdo verticalmente */
+        }
+
+        .card {
+            max-width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+        }
+
+        h1 {
+            color: #3a9c60;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Botões dispostos em coluna */
+            align-items: center; /* Centraliza os botões honrizontalmente */
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 20px; /* Botões levemente arredondados */
+            background-color: #3a9c60;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            width: 100%; /* Botões ocupam largura total do container */
+            max-width: 250px; /* Centraliza o texto dentro dos botões */
+            text-align: center; /* Centraliza o text dentro dos botões */
+        }
+
+        .button.hover {
+            background-color: #6ac88d; /*Mudança de cor ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Clínica Sorrir</h1>
+
+  <div class="button-container">
+    <a href="https://wa.me/seu-numero-de-telefone" class="button">Whatsapp</a>
+    <a href="=tel:+55123456789" class="button">Telefone</a>
+    <a href="mailto:contato@clinicassorrir.com.br" class="button">E-mail</a>
+    <a href="=https://www.clinicasorrir.com.br" class="button">Site</a> 
+  </div>
+</div>
+    
+</body>
+</html>
