@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Programação - Últimas Vagas</title>
+    <style>
+        /* Estilos gerais do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a; /* Cor de fundo */
+            color: #fdfcfd; /* Cor do texto principal */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container principal para centralização e posicionamento */
+        .container {
+            max-width: 800px;
+            margin: 0 auto; /* Centralizar o container na página */
+            display: flex; /* Layout em flexbox para os lados esquerdo e direito */
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Posicionamento relativo para filhos absolutos */
+        }
+
+        /* Lado esquerdo com imagem e título */
+        .left-image {
+            flex: 1; /* Ocupa 50% do espaço disponível */
+            position: relative; /* Para posicionamento absoluto do título */
+        }
+
+        /* Estilo para a imagem dentro do lado esquerdo */
+        .left-image img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            display: block; /* Remove espaços em branco extras */
+        }
+
+        /* Estilo para o título dentro do lado esquero */
+        .left-image h1 {
+            position: absolute; /* Posicionamento absoluto para sobrepor a imagem */
+            top: 20px; /* Ajuste da posição vertical do título */
+            left: 20px; /* Ajuste da posição horizontal do título */
+            color: #fdfcfd; /* Cor do título */
+            font-size: 2.5em; /* Tamanho do título */
+            z-index: 1; /* Sobreposição sobre a imagem */
+        }
+
+        /* Lado direito com conteúdo principal */
+        .right-content {
+            flex: 1; /* Ocupa 50% do espaço disponível */
+            padding-left: 20px; /* Espaçamento à esquerda */
+        }
+
+        /* Cabeçalho com navegação à direita */
+        header {
+            display: flex; /* Layout flexível para alinhamento */
+            align-items: center; /* Alinha itens verticalmente */
+            justify-content: flex-end; /* Alinha itens à direita */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            position: absolute; /* Posicionamento absoluto para sobreposição */
+            top: 20px; /* Distância do topo */
+            right: 20px; /* Distância da direita */
+            z-index: 1; /* Sobreposição sobre outros elementos */
+        }
+
+        /* Estilo para links de navegação no cabeçalho */
+        header nav a {
+            color: #fff; /* Cor do Texto */
+            text-decoration: none; /* Sem sublinhado nos links */
+            margin-left: 20px; /* Espaçamento entre links */
+            font-size: 1rem; /* Tamanho da fonte */
+            transition: color 0.3s ease; /* Transição suave de cor */
+            padding: 10px 20px; /* Espaçamento interno dos links */
+            border: 2px solid #fdfcfd; /* Borda sólida com cor correspondente */
+            border-radius: 5px; /* Borda arredondada */
+        }
+
+        /* Estilo de hover para links de navegação */
+        header nav a:hover {
+            background-color: #730481; /* Cor de fundo ao passar o mouse */
+            color: #1a1a1a; /* Cor do texto ao passar o mouse */
+        }
+
+        /* Conteúdo principal centralizado */
+        main {
+            text-align: center; /* Alinhamento centralizado do texto */
+            margin-top: 120px; /* Distância do topo para o formulário */
+        }
+
+        /* Formulário de inscrição */
+        .signup-form {
+            max-width: 400px; /* Largura máxima do formulário */
+            margin: 0 auto; /* Centraliza o formulário na página */
+        }
+
+        /* Estilos para inputs e botão dentro do formulário */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        button {
+            width: calc(100% - 20px); /* Ajuste para considerar o padding */
+            padding: 10px; /* Espaçamento interno */
+            margin-bottom: 15px; /* Espaçamento inferior */
+            border: none; /* Sem borda nos inputs e botão */
+            font-size: 1rem; /* Tamanho da fonte */
+            box-sizing: border-box; /* Garante que o padding não aumenta o tamanho total */
+        }
+
+        /* Estilos específicos para o botão */
+        button {
+            background-color: #730481; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            cursor: pointer; /* Cursor ao passar sobre o botão */
+            transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+        }
+
+        /* Efeito de hover para o botão */
+        button:hover {
+            background-color: #f06f06; /* Cor de fundo ao passar o mouse */
+        }
+
+        /* Media query para telas menores */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* Layout em coluna para telas menores */
+                text-align: center; /* Alinhamento centralizado do texto */
+            }
+            .left-image,
+            .right-content {
+                max-width: 100%; /* Largura máxima para os lados esquerdo e direito */
+                padding: 0; /* Remove o padding dos lados esquerdo e direito */
+            }
+
+            header {
+                position: static; /* Volta o cabeçalho ao fluxo normal */
+                margin-bottom: 20px; /* Espaçamento inferior reduzido */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Lado esquerdo com imagem e título -->
+        <div class="left-image">
+            <h1>Curso de Programação</h1>
+             <!-- Espaço em branco adicionados para simulação de conteúdo -->
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+            <img src="curso.png" alt="Imagem de Cursos de Programação">
+        </div>
+        <!-- Lado direito com conteúdo principal -->
+        <div class="right-content">
+            <!-- Cabeçalho com navegação à direita -->
+            <header>
+                <nav>
+                    <a href="#">Quem Somos</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Contatos</a>
+                </nav>
+            </header>
+            <!-- Conteúdo principal -->
+            <main>
+                <p>Aprenda Front-End, Back-End e Full Stack</p>
+                <p>Últimas vagas disponíveis!</p>
+                <!-- Formulário de inscrição -->
+                <form action="#" method="POST" class="signup-form">
+                    <input type="text" name="Nome" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <input type="tel" name="whatsapp" placeholder="Seu whatsapp" required>
+                    <button type="submit">Quero me inscrever!</button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
