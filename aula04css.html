@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sua Empresa</title>
+    <style>
+        /* Estilos gerais do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a; /* Cor de fundo escura */
+            color: #fffcff; /* Cor do texto principal */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box; /* Adiciona o box-sizing a todos os elementos */
+        }
+
+        /* Container principal para centralização e posicionamento */
+        .container {
+            max-width: 800px; /* Largura máxima do container */
+            padding: 40px; /* Espaçamento interno aumentado */
+            background-color: #2c2c2c; /* Cor de fundo do container */
+            border-radius: 10px; /* Bordar arredondada */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+            text-align: center; /* Alinhamento do conteúdo centralizado */
+        }
+
+        /* Estilos para o título de cadastro */ 
+        h1 {
+            color: #730481; /* Cor roxa */
+            font-size: 2rem; /* Tamanho do título */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+
+        /* Estilos para os campos de entrada */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        button,
+        input[type="date"] {
+            width: calc(100% - 40px); /* Largura com consideração do padding */
+            padding: 10px; /* Espaçamento interno */
+            margin-bottom: 15px; /* Espaçamento inferior */
+            border: none; /* Sem borda */
+            border-radius: 5px; /* Borda arredondada */
+            font-size: 1rem; /* Tamanho da fonte */
+            box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+        }
+
+        /* Estilos para o botão de envio */
+        button {
+            background-color: #730481; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            cursor: pointer; /* Cursor ao passar sobre o botão */
+            transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+        }
+
+        /* Estilos de hover para o botão */
+        button:hover {
+            background-color: #f06f06; /* Cor de fundo ao passar o mouse */
+        }
+
+        /* Estilos para a checkbox */
+        input[type="checkbox"] {
+            margin-right: 10px; /* Espaçamento à direita */
+        }
+
+        /* Estilos para o link de opção */
+        .option-link {
+            color: #fff; /* Cor do texto */
+            text-decoration: none; /* Sem sublinhado */
+            font-size: 0.99rem; /* Tamanho da fonte */
+            display: block; /* Transforma em bloco para ocupar largura */
+            margin-top: 15px; /* Espaçamento superior */
+        }
+
+        /* Estilos de hover para o link de opção */
+        .option-link:hover {
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
+        }
+        
+        /* Estilos específicos para o fieldset de cursos */
+        fieldset {
+            text-align: left; /* Alinha os checkboxes à esquerda */
+            border: none; /* Remove a borda padrão */
+            padding: 0; /* Remove o padding padrão */
+            margin-bottom: 15px; /* Espaçamento inferior */
+            display: inline-block; /* Mantém o tamanho do fieldset conforme necessário */
+            width: 100%; /* Ocupa toda a largura disponível */
+            text-align: left; /* Alinha os labels dos cursos à esquerda */
+        }
+
+        /* Estilos para os labels dos cursos */
+        fieldset label {
+            margin-bottom: 5px; /* Espaçamento inferior entre os labels */
+        }
+
+        /* Media query para telas menores */
+        @media (max-width: 900px) {
+            .container {
+                width: 90%; /* Largura reduzida para telas menores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+
+        <h1>Cadastro de Aluno</h1>
+
+        <!-- Formulário de cadastro -->
+         <form action="#" method="POST">
+            <input type="text" name="nomeCompleto" placeholder="Nome completo" required>
+            <br>
+            <input type="text" name="endereco" placeholder="Endereço" required>
+            <br>
+            <input type="text" name="contato" placeholder="Contato" required>
+
+            <br>
+            <select name="estado" required>
+                <option value="" disabled selected>Selecione o Estado</option>
+                <option value="CE">Ceará</option>
+                <option value="BA">Bahia</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MA">Maranhão</option>
+            </select>
+            <br>
+            <fieldset>
+                <legend>Curso</legend>
+                <br>
+                <input type="checkbox" id="css" name="curso" value="CSS">
+                <label for="css">CSS</label><br>
+
+                <input type="checkbox" id="sql" name="curso" value="SQL">
+                <label for="sql">SQL</label><br>
+                <input type="checkbox" id="javascript" name="curso" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+                <input type="checkbox" id="bancodedados" name="curso" value="Banco de Dados">
+                <label for="bancodedados">Banco de Dados</label><br>
+                <input type="checkbox" id="java" name="curso" value="Java">
+                <label for="java">Java</label><br>
+                <input type="checkbox" id="python" name="curso" value="Python">
+                <label for="python">Python</label><br>   
+            </fieldset>
+            <br>
+            <label>Data de Nascimento</label>
+            <input type="date" name="data_nascimento" required>
+            <br>
+            <input type="email" name="email" placeholder="Email" required>
+            <br>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <br>
+            <input type="checkbox" id="receber_informacoes" name="receber_informacoes">
+            <br>
+            <br>
+            <button type="submit">Cadastrar</button>
+         </form>
+
+
+    </div>
+</body>
+</html>
